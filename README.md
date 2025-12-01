@@ -35,24 +35,10 @@ Or open the Jupyter notebooks:
 jupyter notebook
 ```
 
-## Repository Structure
-
-```
-regression-algorithms/
-├── README.md
-├── requirements.txt
-├── data/
-│   └── sample_datasets/
-├── linear_regression/
-├── polynomial_regression/
-├── ridge_lasso/
-├── tree_based/
-└── notebooks/
-```
-
 ## Examples
 
 Each implementation includes:
 - Data preprocessing and exploration
 - Model training and evaluation
 - Visualization of results
+
