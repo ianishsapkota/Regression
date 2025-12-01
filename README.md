@@ -1,108 +1,58 @@
-# Multiple Linear Regression on 50 Startups Dataset
+# Regression Algorithms in Python
 
-This project demonstrates how to apply **Multiple Linear Regression** on the popular **50_Startups** dataset to predict company profits based on R&D Spend, Administration, Marketing Spend, and State.
+A comprehensive collection of regression algorithm implementations using Python. This repository serves as a learning resource and reference guide for various regression techniques commonly used in machine learning and data science.
 
-## 📌 Project Overview
+## Overview
 
-The goal of this project is to:
+This repository contains practical examples and implementations of different regression algorithms, demonstrating their usage, strengths, and applications. Each implementation includes clear code examples and explanations to help you understand how these algorithms work.
 
-* Preprocess the dataset (including categorical encoding)
-* Split data into training and test sets
-* Train a Linear Regression model
-* Predict profits for the test set
-* Compare predicted results with actual values
+## Algorithms Included
 
-This project is ideal for beginners learning **Machine Learning**, **Data Preprocessing**, and **Regression Models**.
+- **Linear Regression** - Multiple linear regression for modeling linear relationships
 
----
-
-## 🧠 Technologies Used
-
-* Python
-* NumPy
-* Pandas
-* Matplotlib (optional for visualization)
-* Scikit-learn
-
----
-
-## 📂 Dataset
-
-The dataset used in this project is:
+## Requirements
 
 ```
-50_Startups.csv
+python
+numpy
+pandas
+scikit-learn
+matplotlib
 ```
 
-It contains the following columns:
 
-* R&D Spend
-* Administration
-* Marketing Spend
-* State (Categorical)
-* Profit (Target)
+## Usage
 
----
+Each algorithm is contained in its own Python file or Jupyter notebook. Navigate to the specific algorithm directory and run the example:
 
-## 🚀 How It Works
-
-### 1. **Import Libraries**
-
-Essential libraries such as NumPy, Pandas, Matplotlib, and scikit-learn.
-
-### 2. **Load Dataset**
-
-```python
-dataset = pd.read_csv('50_Startups.csv')
-x = dataset.iloc[:, :-1]
-y = dataset.iloc[:, -1]
+```bash
+python linear_regression_example.py
 ```
 
-### 3. **Encode Categorical Data**
+Or open the Jupyter notebooks:
 
-```python
-ct = ColumnTransformer(transformers=[('encoder', OneHotEncoder(), [3])], remainder='passthrough')
-x = np.array(ct.fit_transform(x))
+```bash
+jupyter notebook
 ```
 
-### 4. **Split Dataset**
-
-```python
-x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2, random_state=0)
-```
-
-### 5. **Train the Model**
-
-```python
-mlr = LinearRegression()
-mlr.fit(x_train, y_train)
-```
-
-### 6. **Make Predictions**
-
-```python
-y_pred = mlr.predict(x_test)
-```
-
-### 7. **View Results**
-
-```python
-print(np.concatenate((y_pred.reshape(len(y_pred), 1), y_test.reshape(len(y_test), 1)), axis=1))
-```
-
-This displays predicted vs actual profit side by side.
-
----
-
-## 📊 Example Output
+## Repository Structure
 
 ```
-[[103015.2 103282.38]
- [132582.3 144259.4 ]
- [132447.7 146121.95]
- ...]
+regression-algorithms/
+├── README.md
+├── requirements.txt
+├── data/
+│   └── sample_datasets/
+├── linear_regression/
+├── polynomial_regression/
+├── ridge_lasso/
+├── tree_based/
+└── notebooks/
 ```
 
----
+## Examples
 
-Happy Coding! 🚀
+Each implementation includes:
+- Data preprocessing and exploration
+- Model training and evaluation
+- Visualization of results
