@@ -31,4 +31,6 @@ plt.plot(x, lr_2.predict(x_poly), color='blue')
 plt.xlabel('X')
 plt.ylabel('Y')
 plt.title('Polynomial Regression')
-plt.show()
+
+lr.predict([[6.5]])
+lr_2.predict(pr.fit_transform([[6.5]]))
