@@ -13,3 +13,8 @@ sc_x = StandardScaler()
 sc_y = StandardScaler()
 x = sc_x.fit_transform(x)
 y = sc_y.fit_transform(y.reshape(-1, 1))
+
+regressor = SVR(kernel = 'rbf')
+regressor.fit(x, y.ravel())
+
+prediction = sc_y.inverse_transform(regressor.predict(sc_x.transform([[6.5]])).reshape(-1,1))
