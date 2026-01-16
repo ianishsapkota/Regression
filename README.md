@@ -8,7 +8,11 @@ This repository contains practical examples and implementations of different reg
 
 ## Algorithms Included
 
-- **Linear Regression** - Multiple linear regression for modeling linear relationships
+- **Linear Regression**
+- **Multiple Linear Regression**
+- **Polinomial Linear Regression**
+- **Random Forest Regression**
+- **Support Vector Regression**
 
 ## Requirements
 
@@ -41,4 +45,5 @@ Each implementation includes:
 - Data preprocessing and exploration
 - Model training and evaluation
 - Visualization of results
+
 
